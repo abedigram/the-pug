@@ -5,19 +5,17 @@ doctype html
 - // xml strict transitional: are used for other doctype files
 
 - // use indents to create nesting elements
-- // use dot followed tag names to write multiline texts
-- // use  #  followed tag names with id name to set id
-- // use  .  followed tag names with class name to set class
 html
     head
     body
+        - // use  #  followed tag names with id name to set id
         h1#pageTitle welcome to the pug!
         
+        - // use  .  followed tag names with class name to set class
         p.description main title
         p.description semi main title
+        
+        - // use dot followed tag names to write multiline texts
         p.
             preprocessor for html. 
             so funny
-        ul
-            li item 1
-            li item 2
