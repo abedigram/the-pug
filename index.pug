@@ -24,3 +24,7 @@ html
         div.box
         .box
         #singleBox
+
+        - // use () to write attributes
+        - // write js ecma 2015 in ` ${} ` 
+        input(type="password" name="pass" data-js=`${5 > 2 ? 'ok' : 'not ok'}`)
