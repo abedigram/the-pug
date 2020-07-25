@@ -1,0 +1,27 @@
+{
+  "name": "thepug",
+  "version": "1.0.0",
+  "description": "pug training project",
+  "main": "index.js",
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "pug -w ./index.pug -o ./html -P"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abedigram/the-pug.git"
+  },
+  "keywords": [
+    "pug",
+    "html"
+  ],
+  "author": "abedigram",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abedigram/the-pug/issues"
+  },
+  "homepage": "https://github.com/abedigram/the-pug#readme"
+}
