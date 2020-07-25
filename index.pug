@@ -2,7 +2,7 @@
 - // use single dash to represent comments
 
 doctype html
-- // xml strict transitional: are used for other doctype files
+- // 'xml' 'strict' 'transitional' are used for other doctype files
 
 - // use indents to create nesting elements
 html
@@ -43,4 +43,8 @@ html
         - const imgAttr = {'src': 'image.png', 'alt': 'awesome image'}
         img&attributes(imgAttr)
 
+        - // using boolean attr same as html5
+        - // using other doctype modes such as 'transition' will result disabled="disabled"
+        - // anyway both types is pug is supported
+        - // disabled=false or disabled="disabled"
         input(type="text" disabled)
