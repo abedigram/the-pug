@@ -28,3 +28,9 @@ html
         - // use () to write attributes
         - // write js ecma 2015 in ` ${} ` 
         input(type="password" name="pass" data-js=`${5 > 2 ? 'ok' : 'not ok'}`)
+
+        - // write js after dash
+        - const classes = ["class1", "class2", "class3"]
+        - // give classes using js arrays, and also using both methods
+        div(class=classes)
+        div(class=classes).divClass
