@@ -94,3 +94,20 @@ html
                 p= n
             else
                 p no values available!
+
+        hr
+        p using conditionals
+        - // use if stmts as follows
+        - // use | to write plaintext ( as well as . followed tag names)
+        - // and #{} for accessing object data
+        - let user = {name: 'mana', isLoggedIn: false, lastLog: 6}
+        if user.isLoggedIn
+            p
+                | user #{user.name} is logged in!
+        else if user.lastLog < 10
+            p user last login was #{user.lastLog} mins ago
+            p
+                a(href="/login") login again
+        else
+            p #{user.name} is not logged in
+            a(href="/login") login
