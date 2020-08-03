@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "pug -w ./index.pug -o ./html -P"
+    "test": "pug -w ./index.pug ./about.pug -o ./html -P"
   },
   "repository": {
     "type": "git",
