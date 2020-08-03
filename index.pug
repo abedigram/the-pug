@@ -1,6 +1,15 @@
 - // yaa Hagh
 - // use single dash to represent comments
 
+
+mixin comment(commnetData)
+    .comment
+        if commnetData.admin
+            em (posted by admin)
+        .date= commnetData.date
+        .author= commnetData.author
+        .text= commnetData.text
+
 doctype html
 - // 'xml' 'strict' 'transitional' are used for other doctype files
 
@@ -129,3 +138,12 @@ html
         // include external pug files using 'include'
         // included files will compile automatically
         include includes/nav.pug
+
+        // use mixins as templates for dynamic data
+        // the mixin template is defined above doctype
+        // and data is bound usign followoing codes
+        - const c = { admin: true, date: 1399, author: 'mira', text:'good stuff'}
+        +comment(c)
+        
+        - const c1 = { date: 1389, author: 'kim', text:'not good stuff'}
+        +comment(c1)
