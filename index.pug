@@ -41,6 +41,7 @@ html
         div(class=classes)
         div(class=classes).divClass
 
+        hr
         - // use js objects for styling
         - const myStyles = {'text-align': 'center'}
         p(style=myStyles) hello
@@ -57,6 +58,7 @@ html
         - // disabled=false or disabled="disabled"
         input(type="text" disabled)
 
+        hr
         div 
             p for each loop
             - // no matter writing for or each keyword
@@ -66,6 +68,7 @@ html
             each value, index in [1,2,4]
                 p= value + '-' + index
         
+        hr.gray
         div
             p loop js array
             - // iterative array could be external
@@ -73,6 +76,7 @@ html
             each name, i in names
                 p= i + '-' + name
         
+        hr.gray 
         div
             p loop js object
             - // u can use object
@@ -81,7 +85,8 @@ html
             - const grades = {'web': 20, 'ai': 13}
             each grade, course in grades
                 p= course + ': ' + grade
-
+        
+        hr.gray
         div
             p loop empty array
             - // in case of looping over an empty array 'else' block runs
