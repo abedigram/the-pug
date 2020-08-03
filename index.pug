@@ -7,6 +7,12 @@ doctype html
 - // use indents to create nesting elements
 html
     head
+        link(rel="stylesheet" href="style.css")
+
+        style.
+            p {
+                color: red;
+            }
     body
         - // use  #  followed tag names with id name to set id
         h1#pageTitle welcome to the pug!
@@ -36,9 +42,11 @@ html
         div(class=classes).divClass
 
         - // use js objects for styling
-        - const myStyles = {'color': 'red', 'background-color': 'blue'}
-        div(style=myStyles)
-        
+        - const myStyles = {'text-align': 'center'}
+        p(style=myStyles) hello
+        - // also using same way as html
+        p(style="text-align: center;") hello
+
         - // use js objects for html attributes
         - const imgAttr = {'src': 'image.png', 'alt': 'awesome image'}
         img&attributes(imgAttr)
@@ -48,3 +56,4 @@ html
         - // anyway both types is pug is supported
         - // disabled=false or disabled="disabled"
         input(type="text" disabled)
+
