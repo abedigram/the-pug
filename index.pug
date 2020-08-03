@@ -57,10 +57,35 @@ html
         - // disabled=false or disabled="disabled"
         input(type="text" disabled)
 
-        p for each loop
-        - // no matter writing for or each keyword
-        - // use = to assign loop values
-        - // first iter is value and second is index (is not name sensitive)
-    - // for value, index in [1,2,4]
-        each value, index in [1,2,4]
-            p= value + '-' + index
+        div 
+            p for each loop
+            - // no matter writing for or each keyword
+            - // use = to assign loop values
+            - // first iter is value and second is index (is not name sensitive)
+            - // for value, index in [1,2,4]
+            each value, index in [1,2,4]
+                p= value + '-' + index
+        
+        div
+            p loop js array
+            - // iterative array could be external
+            - const names = ['lara', 'hana', 'dora']
+            each name, i in names
+                p= i + '-' + name
+        
+        div
+            p loop js object
+            - // u can use object
+            - // no index could be used
+            - // first iter is value and second is name
+            - const grades = {'web': 20, 'ai': 13}
+            each grade, course in grades
+                p= course + ': ' + grade
+
+        div
+            p loop empty array
+            - // in case of looping over an empty array 'else' block runs
+            each n in []
+                p= n
+            else
+                p no values available!
