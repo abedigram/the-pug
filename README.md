@@ -16,3 +16,5 @@ npm run test
 read **index.pug** file source code and open **index.html** file to see the result
 #
 learn more about pug-js at [pugJs.org](https://pugjs.org/api/getting-started.html)
+#
+**part of [contrast](https://github.com/abedigram/contrast) project**
