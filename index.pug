@@ -111,3 +111,17 @@ html
         else
             p #{user.name} is not logged in
             a(href="/login") login
+        
+        hr
+        // use double slashes for commenting
+        p case statement
+        - const order_status = 'NA' // 'pending' 'transit' 'delivered'
+        case order_status
+            when 'pending'
+                p your order is collecting
+            when 'transit'
+                p your order is on the way home
+            when 'delivered'
+                p the box is delivered
+            default
+                p your pack is lost..
